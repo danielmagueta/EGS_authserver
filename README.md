@@ -49,7 +49,7 @@ Deploy Transports
 				 - docker push <path to registry>/egs2/<backend_image>
 				 - kubectl apply -f ../k8s/backend-deployment.yaml
 
-		Inside k8s folder:
+		Inside transports/k8s folder:
 		
 			Mongodb
 
