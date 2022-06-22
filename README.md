@@ -27,8 +27,8 @@ Deploy WareHouse-PChincha
 
 			Backend
 
-				 - docker build -t ImagemDoBackend -f Dockerfile .
-				 - docker push ImagemDoBackend
+				 - docker build -t <path to registry>/egs2/<ImagemDoBackend> -f Dockerfile .
+				 - docker push <path to registry>/egs2/<ImagemDoBackend>
 				 - kubectl apply -f deployment.yaml
 
 
@@ -36,8 +36,8 @@ Deploy WareHouse-PChincha
 
 				 - kubectl apply mongo-pvc.yaml
 				 - kubectl apply mongo-secrets.yaml
-				 - docker build -t ImagemDaMongoDB -f Dockerfile.db .
-				 - docker push ImagemDaMongoDB
+				 - docker build -t <path to registry>/egs2/<ImagemDaMongoDB> -f Dockerfile.db .
+				 - docker push <path to registry>/egs2/<ImagemDaMongoDB>
 				 - kubectl apply -f mongo-deployment.yaml
 
   
