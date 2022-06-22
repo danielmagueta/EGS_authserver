@@ -1,5 +1,5 @@
 # EGS_egs2
-PCincha Store
+PChincha Store
 
 Deploy Authentication
 
@@ -19,22 +19,51 @@ Deploy Authentication
 				- kubectl apply -f mongo-deployment.yaml
 
   
-Deploy WareHouse-PCincha
+Deploy WareHouse-PChincha
 
 		Inside WareHouse_PChincha folder:
 
 			Backend
 
-				 -docker build -t ImagemDoBackend -f Dockerfile .
-				 -docker push ImagemDoBackend
-				 -kubectl apply -f deployment.yaml
+				 - docker build -t ImagemDoBackend -f Dockerfile .
+				 - docker push ImagemDoBackend
+				 - kubectl apply -f deployment.yaml
 
 
 			Mongodb
 
-				 -kubectl apply mongo-pvc.yaml
-				 -kubectl apply mongo-secrets.yaml
-				 -docker build -t ImagemDaMongoDB -f Dockerfile.db .
-				 -docker push ImagemDaMongoDB
-				 -kubectl apply -f mongo-deployment.yaml
+				 - kubectl apply mongo-pvc.yaml
+				 - kubectl apply mongo-secrets.yaml
+				 - docker build -t ImagemDaMongoDB -f Dockerfile.db .
+				 - docker push ImagemDaMongoDB
+				 - kubectl apply -f mongo-deployment.yaml
+
+  
+Deploy Transports
+
+		Inside transports/backend folder:
+
+			Backend
+
+				 - docker build -t <path to registry>/egs2/<backend_image> -f Dockerfile .
+				 - docker push <path to registry>/egs2/<backend_image>
+				 - kubectl apply -f ../k8s/backend-deployment.yaml
+
+		Inside transports folder:
+		
+			Mongodb
+
+				 - kubectl apply k8s/mongo-pvc.yaml
+				 - kubectl apply k8s/mongo-secrets.yaml
+				 - docker build -t <path to registry>/egs2/<mongo_image> -f Dockerfile.db .
+				 - docker push <path to registry>/egs2/<mongo_image>
+				 - kubectl apply -f k8s/mongo-deployment.yaml
+
+		Inside transports/frontend folder:
+		
+			Frontend
+
+				 - docker build -t <path to registry>/egs2/<frontend_image> -f Dockerfile .
+				 - docker push <path to registry>/egs2/<frontend_image>
+				 - kubectl apply -f ../k8s/frontend-deployment.yaml
 
