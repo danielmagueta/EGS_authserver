@@ -19,20 +19,22 @@ Inside egsauthserver folder:
 - kubectl apply -f mongo-deployment.yaml
   
   
-  Deploy WareHouse-PCincha
-  
-      Deploy backend
+Deploy WareHouse-PCincha
 
-    docker build -t ImagemDoBackend -f Dockerfile .
-    docker push ImagemDoBackend
-    kubectl apply -f deployment.yaml
+	Inside WareHouse_PChincha folder:
+
+  	Backend
+
+         -docker build -t ImagemDoBackend -f Dockerfile .
+         -docker push ImagemDoBackend
+         -kubectl apply -f deployment.yaml
 
 
-    Deploy Mongodb
+        Mongodb
 
-    -kubectl apply mongo-pvc.yaml
-    -kubectl apply mongo-secrets.yaml
-    -docker build -t ImagemDaMongoDB -f Dockerfile.db .
-    -docker push ImagemDaMongoDB
-    -kubectl apply -f mongo-deployment.yaml
+         -kubectl apply mongo-pvc.yaml
+         -kubectl apply mongo-secrets.yaml
+         -docker build -t ImagemDaMongoDB -f Dockerfile.db .
+         -docker push ImagemDaMongoDB
+         -kubectl apply -f mongo-deployment.yaml
 
