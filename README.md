@@ -1,5 +1,5 @@
-# EGS_authserver
-Authserver MicroApplication
+# EGS_egs2
+PCincha Store
 
 Deploy Authentication Backend
 
