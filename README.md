@@ -4,6 +4,7 @@ PChincha Store
 Deploy Authentication
 
 		Inside egsauthserver folder:
+		
 			Deploy Authentication Backend
 
 				- mvn clean install (to generate target folder)
