@@ -1,7 +1,7 @@
 # EGS_egs2
 PCincha Store
 
-	Deploy Authentication Backend
+Deploy Authentication
 
 		Inside egsauthserver folder:
 			Deploy Authentication Backend
@@ -19,7 +19,7 @@ PCincha Store
 				- kubectl apply -f mongo-deployment.yaml
 
   
-	Deploy WareHouse-PCincha
+Deploy WareHouse-PCincha
 
 		Inside WareHouse_PChincha folder:
 
