@@ -1,5 +1,6 @@
 # EGS_egs2
 PChincha Store
+
 		Inside frontend folder:
 		
 
