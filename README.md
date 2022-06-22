@@ -49,15 +49,15 @@ Deploy Transports
 				 - docker push <path to registry>/egs2/<backend_image>
 				 - kubectl apply -f ../k8s/backend-deployment.yaml
 
-		Inside transports folder:
+		Inside k8s folder:
 		
 			Mongodb
 
-				 - kubectl apply k8s/mongo-pvc.yaml
-				 - kubectl apply k8s/mongo-secrets.yaml
+				 - kubectl apply mongo-pvc.yaml
+				 - kubectl apply mongo-secrets.yaml
 				 - docker build -t <path to registry>/egs2/<mongo_image> -f Dockerfile.db .
 				 - docker push <path to registry>/egs2/<mongo_image>
-				 - kubectl apply -f k8s/mongo-deployment.yaml
+				 - kubectl apply -f mongo-deployment.yaml
 
 		Inside transports/frontend folder:
 		
