@@ -1,5 +1,11 @@
 # EGS_egs2
 PChincha Store
+		Inside frontend folder:
+		
+
+			- docker build -t <path to registry>/egs2/<frontend_image> -f Dockerfile .
+			- docker push <path to registry>/egs2/<frontend_image>
+			- kubectl apply -f frontend-deployment.yaml
 
 Deploy Authentication
 
