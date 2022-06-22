@@ -1,8 +1,6 @@
 # EGS_authserver
 Authserver MicroApplication
 
-To deploy in Kubernets:
-
 Deploy Authentication Backend
 
 Inside egsauthserver folder:
@@ -11,7 +9,7 @@ Inside egsauthserver folder:
 - docker push <path to registry>/egs2/authserver-deployment:<version>
 - kubectl apply -f deployment.yaml
 
-Deploy Authentication Database (Mongodb)
+Deploy Authentication Backend
 
 Inside egsauthserver folder:
 - kubectl apply mongo-pvc.yaml
