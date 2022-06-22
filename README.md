@@ -13,6 +13,7 @@ Deploy Authentication
 				- kubectl apply -f deployment.yaml
 
 			Deploy Authentication Database
+			
 				- kubectl apply mongo-pvc.yaml
 				- kubectl apply mongo-secrets.yaml
 				- docker build -t <path to registry>/egs2/mongodbauth:<version> -f Dockerfile.db .
